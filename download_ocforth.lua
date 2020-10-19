@@ -1,0 +1,10 @@
+local shell = require("shell")
+
+print(shell.execute("wget", nil, "https://raw.githubusercontent.com/Inconn/OCForth/dev/forth.lua"))
+print(shell.execute("wget", nil, "https://raw.githubusercontent.com/Inconn/OCForth/dev/files/defaultdictionary.json"))
+print(shell.execute("wget", nil, "https://raw.githubusercontent.com/Inconn/OCForth/dev/files/dictionary.json"))
+print(shell.execute("wget", nil, "https://raw.githubusercontent.com/Inconn/OCForth/dev/files/dictionary.lua"))
+print(shell.execute("wget", nil, "https://raw.githubusercontent.com/Inconn/OCForth/dev/files/forth_shell.lua"))
+print(shell.execute("wget", nil, "https://raw.githubusercontent.com/Inconn/OCForth/dev/files/interpreter.lua"))
+print(shell.execute("wget", nil, "https://raw.githubusercontent.com/Inconn/OCForth/dev/files/json.lua"))
+print(shell.execute("wget", nil, "https://raw.githubusercontent.com/Inconn/OCForth/dev/files/stack.lua"))
