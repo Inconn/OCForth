@@ -1,0 +1,42 @@
+{
+    ".":
+    {
+        "codetype": "lua"
+        "code": "local stack, term = ... return stack.pop()"
+    }
+    "+":
+    {
+        "codetype": "lua"
+        "code": "local stack = ... local a = stack.pop() local b = stack.pop() stack.push(a+b)"
+    }
+    "-":
+    {
+        "codetype": "lua"
+        "code": "local stack = ... local a = stack.pop() local b = stack.pop() stack.push(a-b)"
+    }
+    "*":
+    {
+        "codetype": "lua"
+        "code": "local stack = ... local a = stack.pop() local b = stack.pop() stack.push(a*b)"
+    }
+    "/":
+    {
+        "codetype": "lua"
+        "code": "local stack = ... local a = stack.pop() local b = stack.pop() stack.push(a/b)"
+    }
+    ":":
+    {
+        "codetype": "lua"
+        "code": "termDefinition = true"
+    }
+    ";":
+    {
+        "codetype": "lua"
+        "code": "termDefinition = false"
+    }
+    "exit":
+    {
+        "codetype": "lua"
+        "code": ""
+    }
+}
