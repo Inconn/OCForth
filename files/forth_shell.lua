@@ -17,5 +17,5 @@ while true do
     end
     local result = interpret(code)
 
-    term.write(code)
+    term.write(result)
 end
