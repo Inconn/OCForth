@@ -22,7 +22,9 @@ function interpret(l)
     for index, termName in pairs(terms) do
         -- check each term.
         local term = dictionary:lookUp(termName)
-        if term == nil and not termDefintion then
+        if type(tonumber(term)) == "number" and not termDefinition then
+            stack.push(tonumber(term))
+        elseif term == nil and not termDefintion then
             -- term isn't in dictionary, throw error.
             return termName .. " is not defined"
         elseif term.codetype == "lua" and not termDefiniton then
@@ -44,9 +46,9 @@ function interpret(l)
             if newTermName == "" then
                 -- set name of new term
                 newTermName = termName
-            elseif term == nil
+            elseif term == nil or type(tonumber(term)) == "number" then
                 return termName .. " is not defined"
-            elseif termName == ";"
+            elseif termName == ";" then
                 -- end definition of term and add term to dictionary
                 termDefinition = false
                 dictionary.addEntry(newTermName, string.sub(termCode, 2, -1))
