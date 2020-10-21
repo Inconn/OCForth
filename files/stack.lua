@@ -2,27 +2,27 @@
 
 local stack = {}
 
-function stack:new()
+function stack.new()
 
     local t = {}
 
     t._entries = {}
 
-    function t:push(...)
+    function t.push(...)
         if ... then
             local targs = {...}
 
-            for _,v in ipairs(targs) do
-                table.insert(self._entries, v)
+            for i,v in ipairs(targs) do
+                table.insert(t._entries, v)
             end
         end
     end
 
-    function t:pop()
+    function t.pop()
 
-        local num = self._entries[#self._entries]
+        local num = t._entries[#t._entries]
 
-        table.remove(self._entries)
+        table.remove(t._entries)
         return num
     end
 

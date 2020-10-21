@@ -12,16 +12,16 @@ end
 dictionary.entries = json.decode(io.open("./dictionary.json", "r").read("*a"))
 
 for i, v in pairs(dictionary.entries) do
-
+    print(v)
 end
 
 -- lookup for entry
-function dictionary:lookUp(entryName)
+function dictionary.lookUp(entryName)
     return dictionary.entries[entryName]
 end
 
 -- add entry to dictionary
-function dictionary:addEntry(entryName, entryCode)
+function dictionary.addEntry(entryName, entryCode)
     dictionary.entries[entryName] =
     {
         "codetype" = "forth",
@@ -30,7 +30,7 @@ function dictionary:addEntry(entryName, entryCode)
 end
 
 -- save dictionary
-function dictionary:saveDictionary()
+function dictionary.saveDictionary()
     io.open("./dictionary.json", "w").write(json.encode(dictionary.entries))
 end
 

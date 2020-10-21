@@ -7,22 +7,22 @@
     "+":
     {
         "codetype": "lua",
-        "code": "local stack = ... local a = stack.pop() local b = stack.pop() stack.push(a+b)"
+        "code": "local stack = ... if #stack._entries <= 0 then return \"Err:Stack Underflow\" end local a = stack.pop() local b = stack.pop() stack.push(a+b)"
     },
     "-":
     {
         "codetype": "lua",
-        "code": "local stack = ... local a = stack.pop() local b = stack.pop() stack.push(a-b)"
+        "code": "local stack = ... if #stack._entries <= 0 then return \"Err:Stack Underflow\" end local a = stack.pop() local b = stack.pop() stack.push(a-b)"
     },
     "*":
     {
         "codetype": "lua",
-        "code": "local stack = ... local a = stack.pop() local b = stack.pop() stack.push(a*b)"
+        "code": "local stack = ... if #stack._entries <= 0 then return \"Err:Stack Underflow\" end local a = stack.pop() local b = stack.pop() stack.push(a*b)"
     },
     "/":
     {
         "codetype": "lua",
-        "code": "local stack = ... local a = stack.pop() local b = stack.pop() stack.push(a/b)"
+        "code": "local stack = ... if #stack._entries <= 0 then return \"Err:Stack Underflow\" end local a = stack.pop() local b = stack.pop() stack.push(a/b)"
     }
     ":":
     {
